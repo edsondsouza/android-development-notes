@@ -66,7 +66,7 @@ Since Android Studio by default uses a light theme for the editor, it can be har
 # Color
 `import androidx.compose.ui.graphics.Color`
 
-# Padding
+# Padding (Modifier)
 A Modifier is used to augment or decorate a composable. One modifier you can use is the padding modifier, which adds space around the element (in this case, adding space around the text). This is accomplished by using the Modifier.padding() function.
 
 Every composable should have an optional parameter of the type Modifier. This should be the first optional parameter.
@@ -119,7 +119,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Surface(color = Color.Cyan) {
-        Text(text = "Hi, my name is $name!", modifier = modifier.padding(24.dp))
+        Text(text = "Hi, my name is $name!", modifier = modifier.padding(24.dp)) // decorate composable -> here by adding padding
     }
 }
 
@@ -127,7 +127,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     GreetingCardTheme {
-        Greeting("Meghan")
+        Greeting("Edson")
     }
 }
 ```
